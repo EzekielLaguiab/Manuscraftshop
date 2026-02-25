@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Custom handmade bracelets - Create your perfect bracelet">
+    <title>Manu's Craft Shop</title>
+
+    <link rel="icon" type="image/png" href="shop-logo.jpg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header" id="header">
+        <nav class="navbar container">
+            <div class="logo">
+                <img src="shop-logo.jpg"  class="logo-icon" alt="shop logo">
+                <span class="logo-text">Manu's Craft Shop</span>
+            </div>
+
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#shop" class="nav-link">Shop</a></li>
+                <li class="nav-item"><a href="#custom" class="nav-link">Custom Order</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+
+            <div class="header-actions">
+                <div class="cart-icon-wrapper">
+                    <button class="cart-icon" id="cartToggle">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="9" cy="21" r="1"></circle>
+                            <circle cx="20" cy="21" r="1"></circle>
+                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                        </svg>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Cart Modal -->
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-modal-content">
+            <div class="cart-modal-header">
+                <h2>Shopping Cart</h2>
+                <button class="close-btn" id="closeCart">&times;</button>
+            </div>
+            <div class="cart-items" id="cartItems"></div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span class="total-price" id="totalPrice">$0.00</span>
+                </div>
+                <button class="checkout-btn">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-container container">
+            <div class="hero-content">
+                <h1 class="hero-title">Craft Your Perfect Bracelet</h1>
+                <p class="hero-text">Handmade custom bracelets designed just for you. Express yourself with vibrant colors and unique styles</p>
+                <a href="#shop" class="cta-button">Shop Now</a>
+            </div>
+            <div class="hero-image">
+                <div class="bracelet-showcase">
+                    <img src="Bracelets/17.jpg" alt="Featured Bracelet">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shop Section -->
+    <section class="shop" id="shop">
+        <div class="container">
+            <div class="shop-header">
+                <h2 class="section-title">Our Collection</h2>
+                <p class="section-subtitle">Discover our handcrafted bracelet collection</p>
+            </div>
+
+            <!-- Filters -->
+            <div class="shop-controls">
+                <div class="filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="Single Crystal">Single Crystal</button>
+                    <button class="filter-btn" data-filter="Mixed Crystals">Mixed Crystals</button>
+                    <button class="filter-btn" data-filter="Necklace">Necklace</button>
+                    <button class="filter-btn" data-filter="Minimalist">Minimalist</button>
+                </div>
+
+                <div class="sort-wrapper">
+                    <select class="sort-select" id="sortSelect">
+                        <option value="popular">Popular</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="newest">Newest</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="products-grid" id="productsGrid"></div>
+        </div>
+    </section>
+
+    <!-- Custom Order Section -->
+    <section class="custom-order" id="custom">
+        <div class="container">
+            <div class="custom-content">
+                <div class="custom-text">
+                    <h2 class="section-title">Design Your Custom Bracelet</h2>
+                    <p class="custom-description">Can't find what you're looking for? Create a completely custom bracelet tailored to your preferences</p>
+
+                    <div class="custom-features">
+                        <div class="feature">
+                            <span class="feature-icon">🎨</span>
+                            <h4>Choose Colors</h4>
+                            <p>Select from hundreds of vibrant colors</p>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">✂️</span>
+                            <h4>Pick Materials</h4>
+                            <p>Beads, leather, chains, and more</p>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">✍️</span>
+                            <h4>Add Personalization</h4>
+                            <p>Engrave names or special messages</p>
+                        </div>
+                    </div>
+
+                    <a href="#contact" class="cta-button">Start Design</a>
+                </div>
+
+                <div class="custom-image">
+                    <div class="bracelet-preview">
+                        <div class="bracelet bracelet-2"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Manu's Craft Shop</h2>
+                <p class="section-subtitle">Our Story & Passion</p>
+            </div>
+
+            <div class="about-content">
+                <div class="about-card">
+                    <div class="about-icon">🌟</div>
+                    <h3>Handmade Quality</h3>
+                    <p>Each bracelet is carefully crafted by artisans with years of experience using premium materials</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">🚚</div>
+                    <h3>Fast Shipping</h3>
+                    <p>We ship worldwide with fast and reliable delivery to get your bracelet to you quickly</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">💚</div>
+                    <h3>Eco-Friendly</h3>
+                    <p>Committed to sustainable practices with recyclable packaging and ethical sourcing</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">🎁</div>
+                    <h3>Perfect Gifts</h3>
+                    <p>Beautiful gift options with custom packaging for every special occasion</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Questions? We'd love to hear from you</p>
+            </div>
+
+            <div class="contact-content">
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" class="form-input" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-input" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-input form-textarea" placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Send Message</button>
+                </form>
+
+                <div class="contact-info">
+                    <div class="info-card">
+                        <div class="info-icon">📍</div>
+                        <h4 class="info-title">Address</h4>
+                        <p class="info-text">123 Manu's Street, Artisan City, AC 12345</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">📞</div>
+                        <h4 class="info-title">Phone</h4>
+                        <p class="info-text">+1 (555) 123-4567</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">✉️</div>
+                        <h4 class="info-title">Email</h4>
+                        <p class="info-text">hello@Manu'sCraftShop.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="shop-logo.jpg" class="logo-icon" alt="shop logo">
+                    <span class="logo-text">Manu's Craft Shop</span>
+                    <p class="footer-tagline">Handmade Bracelets, Infinite Possibilities</p>
+                </div>
+
+                <div class="social-links">
+                    <a href="#" class="social-link" aria-label="Instagram">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"/>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37Z" fill="none" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Pinterest">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/>
+                            <path d="M8 12c0 2.21 1.79 4 4 4s4-1.79 4-4" fill="none" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link" aria-label="TikTok">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.68v12.7a2.85 2.85 0 1 1-5.92-2.32c.44-.46.77-1.08.82-1.69V9.7a6.6 6.6 0 0 0-5.87 6.32v2.81A6.62 6.62 0 0 0 7.36 24c.44 0 .88-.04 1.31-.12 2.43-.4 4.44-2.1 5.15-4.35.23-.79.38-1.6.38-2.44v-5.67c1.26.93 2.79 1.5 4.4 1.56v-3.4a4.85 4.85 0 0 1-.59-.04z" fill="currentColor"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2026 Manu's Craft Shop. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
