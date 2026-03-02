@@ -196,11 +196,16 @@ function updateCart() {
     cart.forEach((item, index) => {
         const cartItem = document.createElement('div');
         cartItem.className = 'cart-item';
+
         cartItem.innerHTML = `
-            <div class="cart-item-image"></div>
+            <div class="cart-item-image">
+                <img src="${item.image}" alt="${item.name}">
+            </div>
+
             <div class="cart-item-details">
                 <div class="cart-item-name">${item.name}</div>
                 <div class="cart-item-price">$${item.price.toFixed(2)}</div>
+
                 <div class="cart-item-quantity">
                     <button class="qty-btn qty-decrease" data-index="${index}">−</button>
                     <span>${item.quantity}</span>
@@ -209,10 +214,14 @@ function updateCart() {
                 </div>
             </div>
         `;
+
         cartItemsContainer.appendChild(cartItem);
     });
 
-    // Add event listeners for quantity buttons
+    attachCartEvents();
+    updateCartSummary();
+}
+function attachCartEvents() {
     document.querySelectorAll('.qty-decrease').forEach(btn => {
         btn.addEventListener('click', (e) => {
             const index = e.target.dataset.index;
@@ -241,8 +250,6 @@ function updateCart() {
             updateCart();
         });
     });
-
-    updateCartSummary();
 }
 
 function updateCartSummary() {
