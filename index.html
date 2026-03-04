@@ -10,7 +10,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -26,7 +26,6 @@
             <ul class="nav-menu" id="navMenu">
                 <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
                 <li class="nav-item"><a href="#shop" class="nav-link">Shop</a></li>
-                <li class="nav-item"><a href="#custom" class="nav-link">Custom Order</a></li>
                 <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
                 <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
@@ -59,6 +58,7 @@
                 <h2>Shopping Cart</h2>
                 <button class="close-btn" id="closeCart">&times;</button>
             </div>
+            <!-- Cart items are rendered dynamically by script.js -->
             <div class="cart-items" id="cartItems"></div>
             <div class="cart-footer">
                 <div class="cart-total">
@@ -81,6 +81,11 @@
             <div class="hero-image">
                 <div class="bracelet-showcase">
                     <img src="Bracelets/17.jpg" alt="Featured Bracelet">
+                    <div class="hero-floating-card">
+                        <p class="hero-floating-label">Handmade Since 2025</p>
+                        <h3>Natural Stone Collection</h3>
+                        <span>Artisan-crafted pieces for everyday wear</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -114,46 +119,8 @@
                 </div>
             </div>
 
-            <!-- Products Grid -->
+            <!-- Product cards are rendered dynamically by script.js -->
             <div class="products-grid" id="productsGrid"></div>
-        </div>
-    </section>
-
-    <!-- Custom Order Section -->
-    <section class="custom-order" id="custom">
-        <div class="container">
-            <div class="custom-content">
-                <div class="custom-text">
-                    <h2 class="section-title">Design Your Custom Bracelet</h2>
-                    <p class="custom-description">Can't find what you're looking for? Create a completely custom bracelet tailored to your preferences</p>
-
-                    <div class="custom-features">
-                        <div class="feature">
-                            <span class="feature-icon">🎨</span>
-                            <h4>Choose Colors</h4>
-                            <p>Select from hundreds of vibrant colors</p>
-                        </div>
-                        <div class="feature">
-                            <span class="feature-icon">✂️</span>
-                            <h4>Pick Materials</h4>
-                            <p>Beads, leather, chains, and more</p>
-                        </div>
-                        <div class="feature">
-                            <span class="feature-icon">✍️</span>
-                            <h4>Add Personalization</h4>
-                            <p>Engrave names or special messages</p>
-                        </div>
-                    </div>
-
-                    <a href="#contact" class="cta-button">Start Design</a>
-                </div>
-
-                <div class="custom-image">
-                    <div class="bracelet-preview">
-                        <div class="bracelet bracelet-2"></div>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -238,7 +205,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <img src="shop-logo.jpg" class="logo-icon" alt="shop logo">
+                    <img src="Bracelets/shop-logo.jpg" class="logo-icon" alt="shop logo">
                     <span class="logo-text">Manu's Craft Shop</span>
                     <p class="footer-tagline">Handmade Bracelets, Infinite Possibilities</p>
                 </div>
@@ -266,7 +233,7 @@
             </div>
 
             <div class="footer-bottom">
-                <p class="copyright">&copy; 2026 Manu's Craft Shop. All rights reserved.</p>
+                <p class="copyright">&copy; 2025 Manu's Craft Shop. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -274,3 +241,4 @@
     <script src="script.js"></script>
 </body>
 </html>
+
