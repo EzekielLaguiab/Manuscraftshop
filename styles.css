@@ -1301,6 +1301,12 @@ body {
     .contact {
         padding: 56px 0;
     }
+    .footer-logo {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        
+    }
 
     .shop > .container,
     .contact > .container {
