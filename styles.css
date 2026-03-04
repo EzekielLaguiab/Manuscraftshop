@@ -1032,11 +1032,32 @@ body {
 @media (max-width: 768px) {
     .navbar {
         justify-content: flex-start;
-        gap: 0.65rem;
+        gap: 0.75rem;
+        padding: 1rem 16px;
+    }
+
+    .logo {
+        min-width: 0;
+        flex: 1;
+        gap: 0.5rem;
+    }
+
+    .logo-icon {
+        height: 50px;
+        flex-shrink: 0;
+    }
+
+    .logo-text {
+        font-size: 1.24rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     .header-actions {
         margin-left: auto;
+        gap: 0.85rem;
+        flex-shrink: 0;
     }
 
     .nav-menu {
@@ -1066,6 +1087,12 @@ body {
     .hamburger {
         display: flex;
         margin-left: 0.15rem;
+        flex-shrink: 0;
+    }
+
+    .bar {
+        width: 27px;
+        height: 3.2px;
     }
 
     .hamburger.active .bar:nth-child(1) {
@@ -1122,9 +1149,15 @@ body {
     }
 
     .hero-floating-card {
-        right: 10px;
-        bottom: 10px;
-        max-width: calc(100% - 20px);
+        left: 12px;
+        right: 12px;
+        bottom: 12px;
+        max-width: 30%;
+    }
+
+    .hero-floating-label {
+        letter-spacing: 0.06em;
+        font-size: 0.64rem;
     }
 
     .footer-content {
@@ -1170,17 +1203,46 @@ body {
 }
 
 @media (max-width: 480px) {
+    .navbar {
+        display: flex;
+        align-items: center;       /* ito ang magpapantay sa lahat */
+        justify-content: space-between;
+        padding: 14px 20px;
+        min-height: 70px;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+    }
+
+    .logo-icon {
+        height: 50px;
+        display: block;
+    }
+
     .header-actions {
-        gap: 0.8rem;
+        display: flex;
+        align-items: center;       /* pantay icons */
+        gap: 12px;
+    }
+
+    .cart-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .cart-icon svg {
-        width: 22px;
-        height: 22px;
+        width: 26px;
+        height: 26px;
+        display: block;
     }
 
     .hamburger {
-        margin-left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .hero-title {
@@ -1207,7 +1269,8 @@ body {
     }
 
     .logo-text {
-        font-size: 1.3rem;
+        font-size: 1.12rem;
+        max-width: 180px;
     }
 
     .products-grid {
@@ -1246,7 +1309,14 @@ body {
     }
 
     .hero-floating-card {
-        position: static;
-        margin-top: 0.8rem;
+        left: 12px;
+        right: 12px;
+        bottom: 12px;
+        max-width: 40%;
+    }
+
+    .hero-floating-label {
+        letter-spacing: 0.06em;
+        font-size: 0.64rem;
     }
 }
