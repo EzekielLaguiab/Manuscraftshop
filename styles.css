@@ -1212,13 +1212,13 @@ body {
     }
 
     .logo {
-        display: flex;
+        
         align-items: center;
     }
 
     .logo-icon {
-        height: 50px;
-        display: block;
+        
+        display: none;
     }
 
     .header-actions {
