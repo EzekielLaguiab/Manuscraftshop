@@ -1,2 +1,2 @@
-# Manuwari
+# ManusCraftShop
 Custom Bracelets Shop
