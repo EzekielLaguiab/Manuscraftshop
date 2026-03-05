@@ -1218,7 +1218,7 @@ body {
 
     .logo-icon {
         height: 50px;
-        
+        display: block;
     }
 
     .header-actions {
