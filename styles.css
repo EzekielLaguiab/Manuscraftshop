@@ -1211,15 +1211,7 @@ body {
         min-height: 70px;
     }
 
-    .logo {
-        
-        align-items: center;
-    }
-
-    .logo-icon {
-        
-        display: none;
-    }
+    initial 
 
     .header-actions {
         display: flex;
